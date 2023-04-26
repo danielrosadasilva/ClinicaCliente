@@ -1,3 +1,48 @@
+
+:root{ 
+  --cor1: #31437A;   /* declaração de variaveis em css */
+  --cor2: #B0C2FB;
+  --cor3: #6489FA;
+  --cor4: #565F7A;
+  --cor5: #506DC7;
+  --cor6: #0d11eb;
+  --title-bgcolor:#31437A;
+  --fundo-light:#ffffff;
+  --bg-color:#000;
+}
+/*
+.dark-mode:root{
+  --cor1: #be2a16;   
+  --cor2: #e0931f;
+  --cor3: #70bd19;
+  --cor4: #0b2675;
+  --cor5: #c350c7;
+  --cor6: #eb5e0d;
+  --title-bgcolor:#31437A;
+  --fundo-light:#000000;
+  --bg-color:#000000;
+}
+*/
+:root{
+  
+  font-size: 75%;
+}
+
+*{
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+body{
+  
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -13,19 +58,64 @@
   }
 }
 
+#nav{
+  
+    position: relative;
+    font-family: sans-serif,Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-top: 0px;
+    padding: 10px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.397);
+  
+}
+#nav a{  
+  display: inline;
+  text-decoration: none;
+  color:var(--cor6);     
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px; 
+  margin-left: 10px;
+  margin-right: 10px;
+  color: var(--cor6);
+  background: linear-gradient(45deg, var(--title-bgcolor),var(--title-bgcolor) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.397);
+
+  
+ 
+ 
+}
+nav a:hover{
+  background-color:var(--fundo-light);
+  color: var(--cor2);
+ /* border: 5px solid var(--cor1);
+  border-style:1px solid dashed;*/
+  box-shadow: 1px 0px 8px  var(--cor6) ;
+
+}
+.paragrafo{
+  background-color: var(--cor3);
+  margin-left: 10px;
+  margin-right: 100px;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: var(--cor4);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--fundo-light);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--cor3);
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +125,270 @@
   to {
     transform: rotate(360deg);
   }
+}
+.container{
+  box-shadow: 3px 3px 3px  var(--bg-color) ;
+  /*
+  border: 5px solid var(--cor1);
+  border-style: double;*/
+  
+}
+.title {
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--cor6);
+  background: linear-gradient(45deg, var(--title-bgcolor),var(--title-bgcolor) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 7px rgba(17, 17, 17, 0.397);
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.397);
+}
+.subtitle {
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+  color: var(--cor4);
+  background: linear-gradient(45deg, #31437A, #31437A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.397);
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.397);
+}
+
+
+input[type="checkbox"] {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Estilo do rótulo do checkbox */
+label {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--label-color);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Estilo do checkbox personalizado */
+input[type="checkbox"]{
+  position: relative;
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  appearance: none;
+  background-color: var(--fundo-light);
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .15s ease-in-out;
+}
+
+/* Estilo do visual do checkbox quando desmarcado */
+input[type="checkbox"]::before {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: var(--fundo-light);
+  transition: transform .15s ease-in-out;
+}
+
+/* Estilo do visual do checkbox quando marcado */
+input[type="checkbox"]:checked::before {
+  transform: translateY(-50%) translateX(100%);
+  background-color: var(--cor3);
+}
+
+/* Estilo do visual do checkbox quando focado */
+input[type="checkbox"]:focus::before {
+  box-shadow: 0 0 0 3px var(--cor5);
+}
+
+/* Estilo do visual do checkbox quando desabilitado */
+input[type="checkbox"]:disabled {
+  background-color: var(--fundo-light);
+  cursor: not-allowed;
+}
+
+input[type="checkbox"]:disabled::before {
+  background-color: var(--fundo-light);
+}
+
+
+.table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Estilo do cabeçalho da tabela */
+.table th {
+  background-color: var(--fundo-light);
+  color: var(--cor4);
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Estilo das células da tabela */
+.table td {
+  border: 1px solid var(--fundo-light);
+  color: #4a5568;
+  padding: 12px;
+}
+
+/* Estilo das células da tabela alternando cores */
+.table tr:nth-child(even) td {
+  background-color: var(--fundo-light);
+}
+
+/* Estilo das células da tabela quando o mouse passa sobre elas */
+.table tr:hover td {
+  background-color: var(--fundo-light);
+  cursor: pointer;
+  
+}
+
+
+.container th{
+background-color: var(--cor2);
+color: var(--title-bgcolor);
+}
+
+.formulario{
+  background-color: var(--cor2);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.397);
+}
+
+.formButton{
+  align-items: center;
+}
+
+#listapacientes{
+  background-color: var(--cor2);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.397);
+}
+
+.pesquisa {
+  display:grid ;
+}
+.btopcao{
+  font-size: small;
+  padding-top: 0px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.bttabela{
+  display: flex;
+}
+.btsubmit{
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#tema{
+  position: relative;
+}
+
+
+
+
+#atendimentodetailtable tbody,#atendimentodetailtable th{
+  align-items: center;
+  text-align: center;
+}
+
+#atendimentodetailtable table{
+  table-layout: fixed;
+}
+
+
+
+.fixTableHead {
+  overflow-y: auto;
+  height: 60vh;
+}
+.fixTableHead thead th {
+  position: sticky;
+  top: 0;
+}
+table {
+  border-collapse: collapse;        
+  width: 100%;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 2;
+  right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown p{
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+.dropdown-content p:hover{
+  box-shadow: 1px 0px 8px var(--cor5);
+  cursor: pointer;
+}
+
+#id{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+@media (min-width: 800px)
+{
+  #dropmenunav
+   {
+    display: none;
+   }
+}
+@media (max-width: 800px)
+{
+  #itemsmenunav
+   {
+    visibility: hidden;
+   }
 }
