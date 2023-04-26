@@ -121,7 +121,7 @@ const PacientePage = () => {
                     <article className="bttabela">
                     <div class="dropdown">
                       <Button><span><FaBars/>Opções</span></Button>
-                      <div class="dropdown-content">
+                      <div class="dropdown-content tabeladadosdropdown">
                         <p onClick={()=>navigate("/Paciente/"+paciente.id)}><FaPen/> Editar</p>
                         <p onClick={() => {navigate("/Paciente/" + paciente.id + "/Atendimento");}}><FaEye/> Atendimentos</p>
                       </div>

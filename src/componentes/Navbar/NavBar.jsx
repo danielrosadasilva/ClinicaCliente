@@ -31,8 +31,10 @@ const Navbar = () => {
                     <div className="dropdown" id="dropmenunav" style={{justifyContent:"right"}}>
                       <Link style={{fontSize:'20px'}}><FaBars/></Link>
                       <div className="dropdown-content">
-                        <p onClick={()=>navigate("/"+URL_BASE_PACIENTE)}><FaUser/> Editar</p>
+                        <p onClick={()=>navigate("/")}><FaHome/> Home</p>
+                        <p onClick={() =>navigate("/"+URL_BASE_PACIENTE)}><FaUser/> Paciente</p>
                         <p onClick={() =>navigate("/"+URL_BASE_ATENDIMENTO)}><FaPaperPlane/> Atendimentos</p>
+                        <p onClick={() =>navigate("/Relatorio")}><FaPaperPlane/> Relatório</p>
                       </div>
                     </div>
      { /*<input type="checkbox" className="toggle" ></input>*/}
