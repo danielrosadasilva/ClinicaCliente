@@ -130,9 +130,9 @@ const AtendimentoPage = ({ pacienteId }) => {
                 </td>
                 <td style={{backgroundColor:(atendimento.concluido)?"#22CC66":""}}>{atendimento.concluido ? "concluido" : "pendente"}</td>
                 <td>
-                  <div class="dropdown">
+                  <div class="dropdown" >
                     <Button><span><FaBars/>Opções</span></Button>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content tabeladadosdropdown">
                       <p onClick={() => {navigate("/"+URL_BASE_PACIENTE+atendimento.pacienteid+"/"+URL_BASE_ATENDIMENTO + atendimento.id +"/Detalhes");}}><FaRegListAlt/> Detalhes</p>
                           
                       {(!atendimento?.concluido)?(
