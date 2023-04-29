@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from '../../config/axios';
 import { FaPen } from 'react-icons/fa';
-import { resultadoCovid } from '../../utils';
+
 
 
 
@@ -83,10 +83,7 @@ useEffect(() => {
         <h1 className='title'> Paciente {pacientes[0]?.nome}</h1>
        
         <h3 className='subtitle'>Data Nacimento:  {(pacientes[0])?new Date(pacientes[0]?.datanascimento).toLocaleDateString("pt-BR"):""}
-       {  /* 
-                      ("0" + new Date(pacientes[0].datanascimento).getDate()).substr(-2) + "/" 
-                      + ("0" + (new Date(pacientes[0].datanascimento).getMonth() + 1)).substr(-2) + "/" + new Date(pacientes[0].datanascimento).getFullYear()
-  alert(pacientes[0].datanascimento+"."+pacientes[0].datanascimento).getMonth */}  </h3>
+      </h3>
         <h3 className='subtitle'>CPF: {pacientes[0]?.cpf}</h3>
 
         <div>

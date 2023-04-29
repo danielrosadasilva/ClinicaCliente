@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { buscarPacientePorCpf, cadastrarAtendimentoPorPaciente, findByPacienteCpf, newAtendimentoByPaciente } from '../../services/PacienteServices';
+import { findByPacienteCpf, newAtendimentoByPaciente } from '../../services/PacienteServices';
 import { useNavigate } from 'react-router-dom';
 import { FaPen } from 'react-icons/fa';
 import { convertCpfFormattedStringToNumber } from '../../utils';

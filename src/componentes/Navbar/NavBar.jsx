@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -22,7 +21,7 @@ const Navbar = () => {
       </div>
       <div id="itemsmenunav">
       <Link to="/"><FaHome/> Home</Link>
-      <Link to="/Paciente"><FaUser/> Paciente</Link>
+      <Link to="/Paciente/Novo"><FaUser/> Paciente</Link>
 
       <Link to="/Atendimento"><FaPaperPlane/> Atendimento</Link>
 
@@ -32,12 +31,11 @@ const Navbar = () => {
                       <Link style={{fontSize:'20px'}}><FaBars/></Link>
                       <div className="dropdown-content">
                         <p onClick={()=>navigate("/")}><FaHome/> Home</p>
-                        <p onClick={() =>navigate("/"+URL_BASE_PACIENTE)}><FaUser/> Paciente</p>
+                        <p onClick={() =>navigate("/"+URL_BASE_PACIENTE+"Novo")}><FaUser/> Paciente</p>
                         <p onClick={() =>navigate("/"+URL_BASE_ATENDIMENTO)}><FaPaperPlane/> Atendimentos</p>
                         <p onClick={() =>navigate("/Relatorio")}><FaPaperPlane/> Relatório</p>
                       </div>
                     </div>
-     { /*<input type="checkbox" className="toggle" ></input>*/}
     </nav>
   );
 };

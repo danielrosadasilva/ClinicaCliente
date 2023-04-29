@@ -8,7 +8,7 @@ const ExamesCovidPage = () => {
   const navigate = useNavigate();
   const { pacienteid, atendimentoid } = useParams();
   const [examescovid, setExamescovid] = useState([]);
-  const [febre, setFebre] = useState(false);
+
 
   // /Paciente/{pacienteid}/Atendimento/{atendimentoid}/Examecovid
 

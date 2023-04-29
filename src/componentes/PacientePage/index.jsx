@@ -1,28 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { FaBars, FaEye, FaPen, FaPlusCircle } from "react-icons/fa";
+import { FaBars, FaEye, FaPen } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import { IMaskInput } from "react-imask";
-//import axios, { requestPostAsAsync } from "../../config/axios";
 import { useNavigate } from "react-router-dom";
 import {
   convertCpfFormattedStringToNumber,
   convertCpfNumberToFormattedString,
- // convertTelefoneFormattedStringToNumber,
 } from "../../utils";
 import {
   buscarPacientePorCpf,
- // buscarPacientes,
- // cadastrarPaciente,
   findAll,
   findByPacienteCpf,
-//  newPaciente,
 } from "../../services/PacienteServices";
-import { clamp } from "date-fns";
-
-//import FormPaciente from "../FormPaciente";
 
 const URL_BASE_PACIENTE = "Paciente/";
 
@@ -66,7 +58,7 @@ const PacientePage = () => {
 
 
   return (
-    <section className="container" >
+    <section className="container" > 
       <section >
         <h1 className="title">Pacientes Cadastrados</h1>
         <Form.Group className="mb-3" controlId="formBasicCpfpesquisa">
