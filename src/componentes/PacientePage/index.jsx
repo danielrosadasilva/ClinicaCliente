@@ -24,6 +24,7 @@ const PacientePage = () => {
   const navigate = useNavigate();
   const [pacientes,setPacientes]=useState();
   const [atualizacao, setAtualizacao] = useState(false);
+  const [filtroNome,setFiltroNome]=useState();
 
   useEffect(() => {
     
@@ -74,6 +75,7 @@ const PacientePage = () => {
             value={cpfpacientepesquisa}
             onChange={(e) => setCpfpacientepesquisa(e.target.value)}
           />
+        
           <Button className="btsubmit" onClick={()=>navigate("/Paciente/Novo")}><FaPen/> Cadastrar Paciente</Button>
         </article>
           <Form.Text className="text-muted"></Form.Text>

@@ -17,6 +17,7 @@ import AtendimentoDetailsPage from './componentes/AtendimentoDetailsPage';
 import ExameGeralPage from './componentes/ExameGeralPage';
 import FormExameGeral from './componentes/FormExameGeral';
 import RelatorioPage from './componentes/RelatorioPage';
+import Teste from './componentes/teste/index'
 
 
 
@@ -43,6 +44,7 @@ function App() {
       <Route path='/Atendimento/Novo' element={<FormAtendimento/>}/>
       <Route path='/Atendimento/:atendimentoid/Detalhes' element={<AtendimentoDetailsPage/>}/>
       <Route path="/Relatorio" element={<RelatorioPage/>}/>
+      <Route path='/Teste' element={<Teste/>}/>
       <Route path="*" element={<h2>Não Encontrado</h2>}/>
       
     </Routes>
